@@ -2,13 +2,13 @@ import mysql.connector as connection
 try:
      mydb = connection.connect(
                               host = "localhost", 
-                              database = "data_july",
+                              database = "campusx",
                               user = "root", passwd = "",
                               use_pure = True
                          )
      
      print(mydb.is_connected())
-     query = "SELECT COUNT(*) FROM details_july_data;"
+     query = "SELECT Count(*) FROM final_data_one_year;"
      cursor = mydb.cursor()
      cursor.execute(query)
      for resutl in cursor.fetchall():
